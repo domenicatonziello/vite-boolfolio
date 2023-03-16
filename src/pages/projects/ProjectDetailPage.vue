@@ -25,7 +25,7 @@ export default {
 
 <template>
     <main class="container">
-        <div v-if="project" class="row my-5">
+        <div class="row my-5">
             <div class="card mb-3 p-0">
                 <div class="row g-0">
                     <div class="col-md-5">
@@ -36,7 +36,7 @@ export default {
                             <h5>{{ project.title }}</h5>
                             <p class="card-text"> {{ project.description }}</p>
                             <p class="card-text"> GitHub: {{ project.link_project }}</p>
-                            <p class="card-text"><small class="badge" :style="{ backgroundColor: project.type.color }">{{
+                            <p class="card-text"><small class="badge" :style="{ backgroundColor: project.type?.color }">{{
                                 project.type?.name }}</small></p>
                             <ul class="text-muted">
                                 <li>Tecnologie:</li>
