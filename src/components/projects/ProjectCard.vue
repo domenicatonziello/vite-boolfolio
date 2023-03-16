@@ -1,7 +1,10 @@
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
-    name: 'ProjectCard',
+    name: "ProjectCard",
     props: { project: Object },
+    components: { RouterLink }
 }
 </script>
 
@@ -14,7 +17,9 @@ export default {
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
                 <div class="buttons">
-                    <a href="#" class="btn btn-primary">Dettagli</a>
+                    <router-link :to="{ name: 'project-detail', params: { id: project.id } }"
+                        class="btn btn-primary">Dettagli
+                    </router-link>
                 </div>
             </div>
         </div>
