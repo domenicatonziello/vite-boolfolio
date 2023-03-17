@@ -43,6 +43,9 @@ export default {
                                 <li v-for="technology in project.technologies" :style="{ color: technology.color }">{{
                                     technology.label }}</li>
                             </ul>
+                            <div class="text-end">
+                                <router-link to="/" class="btn btn-small btn-secondary text-end"> Indietro </router-link>
+                            </div>
                         </div>
                     </div>
                 </div>
